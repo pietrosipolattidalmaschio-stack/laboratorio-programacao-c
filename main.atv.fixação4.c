@@ -1,24 +1,14 @@
+//Ler uma palavra e exibir cada caractere em uma linha.
 #include <stdio.h>
 
-int main() {
-    int matriz[3][3];
-    printf("Digite 9 números para a matriz: ");
+int main(void) {
     
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            scanf("%d", &matriz[i][j]);
-        }
+    char palavra[50];
+    printf("Digite uma palavra: ");
+    fgets(palavra, sizeof(palavra), stdin);
+    
+    for (int i = 0; palavra[i] != '\0'; i++) {
+        printf("%c\n", palavra[i]);
     }
-    
-    int maior = matriz[0][0];
-    
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (matriz[i][j] > maior) {
-                maior = matriz[i][j];
-            }
-        }
-    }
-    printf("O maior valor é: %d", maior);
     return 0;
 }
