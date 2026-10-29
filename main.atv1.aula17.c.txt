@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    
+    char nome[50], perfil[6];
+    char mensagem[] = "Seja bem-vindo(a), ";
+    printf("====== CADASTRO DE USUÁRIOS ====== \n\n");
+    printf("Digite o seu nome: ");
+    scanf("%49s", nome);
+    printf("Digite seu perfil de acesso (ADMIN ou COMUM): ");
+    scanf("%5s", perfil);
+    
+    printf("\n\n ====== USUÁRIOS CADASTRADOS ======\n");
+    printf("Nome: %s\n", nome);
+    printf("Quantidade de caracteres: %zu\n", strlen(nome));
+    if (strcmp(perfil, "ADMIN") == 0) {
+        printf("Perfil: Administrador\n");
+    } else {
+        printf("Perfil: Funcionário comum\n\n");
+    }
+    
+    strcat(mensagem, nome);
+    printf("%s!\n\n", mensagem);
+    printf("Cadastro realizado com sucesso!");
+
+    return 0;
+}

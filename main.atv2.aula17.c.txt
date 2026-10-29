@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char nome[100], categoria[15];
+    printf("\n====== CADASTRO DE PRODUTOS ======\n");
+    
+    printf("Digite o nome do produto: ");
+    fgets(nome, sizeof(nome), stdin);
+    nome[strcspn(nome, "\n")] = '\0';
+    
+    printf("Digite a categoria do produto (HARDWARE ou PERIFERICO: ");
+    scanf("%14s", categoria);
+    
+    printf("\n====== RESUMO DO PRODUTO ======\n");
+    
+    if (strcmp(categoria, "PERIFERICO") == 0) {
+        printf("Categoria: PERIFERICO\n");
+    } else {
+        printf("Categoria: HARDWARE\n");
+    }
+    
+    printf("Produto: %s\n", nome);
+    printf("Nº de caracteres: %zu\n", strlen(nome));
+    printf("Categoria: %s\n", categoria);
+    
+    printf("\nDescrição: Produto: %s", nome);
+    printf("Cadastro concluído!");
+    
+    return 0;
+}
