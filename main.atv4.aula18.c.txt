@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int dobro(int quantidade) {
+    return quantidade * 2;
+}
+
+int main() {
+    
+    printf("===== CONTROLE DE ESTOQUE =====\n");
+    int quantidade;
+    
+    printf("Digite a quantidade de produtos no estoque: ");
+    scanf("%d", &quantidade);
+    
+    printf("A quantidade de produtos após a duplicação é: %d", dobro(quantidade));
+    return 0;
+}

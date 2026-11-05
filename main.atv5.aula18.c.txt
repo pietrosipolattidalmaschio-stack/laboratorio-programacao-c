@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int exibirLinha(void){
+    printf("**********");
+    return 0;
+}
+
+int main() {
+    exibirLinha();
+    printf("\nRELATÓRIO DE ESTOQUE\n");
+    exibirLinha();
+    return 0;
+}

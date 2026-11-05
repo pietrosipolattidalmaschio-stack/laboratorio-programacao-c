@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int maiorPreco(int preco1, int preco2) {
+    if (preco1 > preco2) {
+        return preco1;
+    } else {
+        return preco2;
+    }
+}
+
+int main(void) {
+    
+    printf("===== COMPARADOR DE PREÇOS =====\n");
+    int preco1, preco2;
+    
+    printf("Digite o valor do produto 1: ");
+    scanf("%d", &preco1);
+    printf("Digite o valor do produto 2: ");
+    scanf("%d", &preco2);
+    
+    if (preco1 == preco2) {
+        printf("Os preços são iguais!");
+    } else {
+        printf("Maior preço: %d", maiorPreco(preco1, preco2));
+    }
+    
+    return 0;
+}
